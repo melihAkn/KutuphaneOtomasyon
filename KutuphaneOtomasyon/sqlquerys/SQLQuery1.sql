@@ -20,13 +20,6 @@ ArkaKapakResmiYolu nvarchar(max),
 ALTER TABLE [dbo].[Kitaplar]
     ADD CONSTRAINT [CK_Kitaplar_stok] CHECK ([stok]>=(0));
 
-select Adi,YazarAdi,YayinEvi,Kategori,Dili,SayfaSayisi from Kitaplar where Kategori ='Bilim Kurgu'
-select Adi,YazarAdi,YayinEvi,Kategori,Dili,SayfaSayisi from Kitaplar where Kategori LIKE 'b%'
-insert into Kitaplar values(@Adi,@YazarAdi,@KapakTuru,@Kategori,@Ozet,@Dili,@Boyut,SayfaSayisi,@stok)
-insert into Kitaplar values('Labirent ölümcül kaçış','James Dashner','Pegasus','Karton Kapak','Bilim kurgu','aıofjıgnsjngsjnfjdsnfoefnsd','turkçe','150x200','420',1)
-select * from Kitaplar
-
-
 create table Odunc(
 id int primary key identity(1,1),
 KiralayanAd nvarchar(50) not null,
@@ -38,14 +31,6 @@ KiralamaTarihi date not null,
 TeslimTarihi date not null,
 
 )
-drop table Odunc
-truncate table Odunc
-select * from Odunc
-select * from Kitaplar
-select Adi,YazarAdi,YayinEvi,Kategori,Dili,SayfaSayisi from Kitaplar where Kategori LIKE '%B'+'%'
-select Adi,YazarAdi,YayinEvi,Kategori,Dili,SayfaSayisi from Kitaplar where Kategori LIKE '%"+b+"%'
-select * from kitaplar where kategori like '%B'+'%'
-select * from Kitaplar
 
 declare @BarkodNo int
 set @BarkodNo=23232
@@ -56,7 +41,7 @@ print('boyle bir kayıt var')
 end
 
 
-/*girilen barkod numarasına gore tabloda veri olup olmadıgının kontrolo
+girilen barkod numarasına gore tabloda veri olup olmadıgının kontrolo
 create proc Sp_KayitVarmi (@BarkodNo int ,@sonuc int output)
 as
 begin
@@ -77,22 +62,13 @@ end
 
 exec Sp_KayitVarmi 23232,1
 
-select * from Odunc
-
-*/
 select count(BarkodNo) from kitaplar where BarkodNo=23232
-
-
-
 
 IF ( (SELECT COUNT(*) from Odunc WHERE KiralayanTc = 2) < 4 )
 BEGIN
    insert into Odunc values('w','w','2','2','2211',getdate(),getdate())
 END
 
-
-
-select * from odunc
 
 print len(@deger)
 
