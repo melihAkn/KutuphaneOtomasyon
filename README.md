@@ -24,7 +24,8 @@ Barkod numarası 9 karakter uzunluğunda olmak zorunda,kitabın arka ve ön resi
 
 Kurulum Notları
 
-1.Oncelikle dapperi buradan  https://begincodingnow.com/dapper-installation-into-your-project-visual-studio/ veya  bu komut ile Install-Package Dapper kurabilirsiniz.
+1.Oncelikle dapperi buradan  https://begincodingnow.com/dapper-installation-into-your-project-visual-studio/ veya paket yöeticisi konsoluna bu komutu yazarak Install-Package Dapper dapperı kurabilirsiniz.
+Paket yöneticisi konsolunu açmak için en üstteki gorunum sekmesinden diğer pencelerel içinde paket yonetici konsoluna tıklayarak açabilirsiniz.
 
 2.Sqlquerys klasorunun içindeki sqlquerry1.sql dosyasını açıp veritabanını oluşturup,gerekli tabloları oluşturmalısınız.
 
