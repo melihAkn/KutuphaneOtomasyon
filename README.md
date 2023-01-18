@@ -20,7 +20,7 @@ Eklenecek olan kitapların kitabın adı,yazarının adı,yayın evi,kapak turu,
 Formun alt tarafında veritabanında kayıtlı olan kitapların getirilmesi
 Zorunlu olarak girlmesi gerekenler
 Barkod numarası 9 karakter uzunluğunda olmak zorunda,kitabın arka ve ön resimleri yuklenmeli ve hiçbir bilgi boş girilmemeli
-
+Kitap eklendikten ana formdaki tablonun güncellenmesi
 
 Kurulum Notları
 
