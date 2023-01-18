@@ -2,10 +2,12 @@
 Özellikler
 
 Ana form
+
 uygulama ilk açıldıgında veritabanındaki tum kitapların listelenip sol tarafta seçili kitap kaydının resmi ve özetinin görülmesi
 kitabın turu kitabın adı ve yazarın adına gore arama yapılması
 
 Odunc verme formu
+
 Kitabın barkod numarası,oducn verilen tarih,teslim tarihi,odunc verilen kişinin adı soyadı tc'si telefon numarası bilgilerinin istenmesi
 Barkod numarası sol taraftaki tablodan kayıda çift tıklandıgında o kitabın barkod numarasının barkod no alanına getirilmesi
 Odunc verilen tarih ve teslim tarihi değiştirilemez olarak ayarlı
@@ -13,6 +15,7 @@ Formun altındaki tabloda odunc verilimiş kitapların listesi ve kişinin adın
 Eğer teslim tarihini geçmişse geçen her gun için 5 tl ceza uygulanması ve odemeniz gereken ücret yazan alanın yanında yazılması
 
 Kitap İslemleri Formu
+
 Eklenecek olan kitapların kitabın adı,yazarının adı,yayın evi,kapak turu,kategori,barkod no,kitabın özeti,kitabın dili,kitabın boyutu,sayfa sayısı,stok,kitabın Ön resmi,kitabın arka resmi bilgilerinin istenmesi
 Formun alt tarafında veritabanında kayıtlı olan kitapların getirilmesi
 Zorunlu olarak girlmesi gerekenler
