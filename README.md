@@ -19,7 +19,7 @@ Zorunlu olarak girlmesi gerekenler
 Barkod numarası 9 karakter uzunluğunda olmak zorunda,kitabın arka ve ön resimleri yuklenmeli ve hiçbir bilgi boş girilmemeli
 
 
-------------------------------------------------------------Kurulum Notları-------------------------------------------------------------------------------------
+Kurulum Notları
 1.Oncelikle dapperi buradan  https://begincodingnow.com/dapper-installation-into-your-project-visual-studio/ veya  bu komut ile Install-Package Dapper kurabilirsiniz.
 
 2.Sqlquerys klasorunun içindeki sqlquerry1.sql dosyasını açıp veritabanını oluşturup,gerekli tabloları oluşturmalısınız.
