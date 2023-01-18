@@ -32,4 +32,5 @@ Kurulum Notları
         Data Source = Bilgisayarınızdaki_Sunucu_Adı;Initial Catalog =oluşturdugunuz_veritabanı_adı ; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
             "; 
 düzenlemeniz gerekiyor.
+veya visual studioda sql server object explorer sekmesinden sql server altında bulunan servera tıklayıp özelliklerinden connection stringi kopyalayıp initial category kısmına oluşturduğunuz veritabanının adını yazabilirsiniz.
 
