@@ -32,16 +32,7 @@ TeslimTarihi date not null,
 
 )
 
-declare @BarkodNo int
-set @BarkodNo=23232
-select @BarkodNo 
-if exists(select BarkodNo from kitaplar where BarkodNo=@BarkodNo)
-begin
-print('boyle bir kayıt var')
-end
-
-
-girilen barkod numarasına gore tabloda veri olup olmadıgının kontrolo
+girilen barkod numarasına gore tabloda veri olup olmadıgının kontrolu
 create proc Sp_KayitVarmi (@BarkodNo int ,@sonuc int output)
 as
 begin
@@ -60,26 +51,20 @@ set @sonuc =0
 end
 end
 
-exec Sp_KayitVarmi 23232,1
-
-select count(BarkodNo) from kitaplar where BarkodNo=23232
-
-IF ( (SELECT COUNT(*) from Odunc WHERE KiralayanTc = 2) < 4 )
-BEGIN
-   insert into Odunc values('w','w','2','2','2211',getdate(),getdate())
-END
-
-
-print len(@deger)
-
-declare @deger bigint
-set @deger=123456780
-if(len(@deger)=10)
+--girilen barkod numarasına gore odunc tablosunda veri olup olmadıgının kontrolu
+create proc Sp_BarkodNoVarMi (@BarkodNo int ,@sonuc int output)
+as
 begin
-insert into Kitaplar values('Labirent ölümcül kaçış','James Dashner','Pegasus','Karton Kapak','Bilim kurgu','aıofjıgnsjngsjnfjdsnfoefnsd','turkçe','150x200','420',1,@deger)
+declare @varmi int
+set @varmi =(select count(BarkodNo) from Odunc where BarkodNo=@BarkodNo)
+if(@varmi = 1 )
+begin
+select * from Kitaplar where BarkodNo=@BarkodNo
+set @sonuc =1
 
 end
 else
 begin
-print 'eklenemedi'
+set @sonuc =0
+end
 end
