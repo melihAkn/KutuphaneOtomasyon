@@ -140,8 +140,22 @@ namespace KutuphaneOtomasyon.DAL
         public void KitapSilme(TumKitapBilgileri kitapIslemleri)
         {
 
-            using SqlConnection db = new(ConnectionString);
-            var result = db.Execute(@"delete kitaplar where Id=@Id", kitapIslemleri);
+                using SqlConnection db = new(ConnectionString);
+            var sql = "exec Sp_BarkodNoVarMi @BarkodNo, @sonuc";
+            var values = new { BarkodNo = Sorgu.BarkodNo, sonuc = 0 };
+            var results = db.Query(sql, values).ToList();
+            results.ForEach(r => Console.WriteLine($"{r.sonuc}"));
+            deger = results.Count();
+
+            if(deger> 0 )
+            {
+                MessageBox.Show("odunc verilmiş kitap silinemez");
+            }
+            else
+            {
+                db.Execute(@"delete kitaplar where Id=@Id", kitapIslemleri);
+                MessageBox.Show("kayıt başarı ile silindi");
+            }
         }
         
         public void BarkodEslesmeVeKayitEkleme(BarkodNoSorgu BarkodSorgu, Odunc OduncIslemleri)
