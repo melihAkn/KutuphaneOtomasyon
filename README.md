@@ -27,7 +27,7 @@ Kurulum Notları
 1.Oncelikle dapperi buradan  https://begincodingnow.com/dapper-installation-into-your-project-visual-studio/ veya paket yöneticisi konsoluna bu komutu yazarak Install-Package Dapper dapperı kurabilirsiniz.
 Paket yöneticisi konsolunu açmak için en üstteki gorunum sekmesinden diğer pencelerel içinde paket yonetici konsoluna tıklayarak açabilirsiniz.
 
-2.Sqlquerys klasorunun içindeki sqlquerry1.sql dosyasını açıp veritabanını oluşturup,gerekli tabloları oluşturmalısınız.
+2.Sqlquerys klasorunun içindeki sqlquerry1.sql dosyasını açıp tüm kodları çalıştırmalısınız.
 
 3.Dal klasorunun içindeki KutuphaneDatabase.cs dosyasını açıp connection stringi bu şekilde public string ConnectionString = @"
         Data Source = Bilgisayarınızdaki_Sunucu_Adı;Initial Catalog =oluşturdugunuz_veritabanı_adı ; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
